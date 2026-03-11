@@ -1,11 +1,12 @@
 import { useEffect, useState, type JSX } from "react";
 
 import {
-  THEME_STORAGE_KEY,
+  resolveInitialTheme,
+  resolveTheme,
+  STORAGE_KEY,
   ThemeContext,
-  themeUtil,
-  type IChildren,
-  type ThemeNameType,
+  type ThemeName,
+  type ThemeProviderProps,
 } from "@domain";
 
 /**
@@ -15,33 +16,29 @@ import {
  * @param {ThemeProviderProps} props Props del proveedor
  * @returns {JSX.Element} Proveedor de contexto de tema
  */
-export function ThemeProvider({ children }: IChildren): JSX.Element {
-  const [ThemeNameType, setThemeNameType] = useState<ThemeNameType>(
-    themeUtil.resolveInitialTheme(),
-  );
+export function ThemeProvider({ children }: ThemeProviderProps): JSX.Element {
+  const [themeName, setThemeName] = useState<ThemeName>(resolveInitialTheme);
 
   /**
    * @description Persiste el tema seleccionado en localStorage
    *              cada vez que cambia.
    */
   useEffect(() => {
-    localStorage.setItem(THEME_STORAGE_KEY, ThemeNameType);
-  }, [ThemeNameType]);
+    localStorage.setItem(STORAGE_KEY, themeName);
+  }, [themeName]);
 
   /**
    * @description Cambia el tema de la aplicación.
-   * @param {ThemeNameType} newTheme Nuevo tema a aplicar
+   * @param {ThemeName} newTheme Nuevo tema a aplicar
    */
-  const setTheme = (newTheme: ThemeNameType): void => {
-    setThemeNameType(newTheme);
+  const setTheme = (newTheme: ThemeName): void => {
+    setThemeName(newTheme);
   };
 
-  const theme = themeUtil.resolveThemeConfig(ThemeNameType);
+  const theme = resolveTheme(themeName);
 
   return (
-    <ThemeContext.Provider
-      value={{ theme, themeName: ThemeNameType, setTheme }}
-    >
+    <ThemeContext.Provider value={{ theme, themeName, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );

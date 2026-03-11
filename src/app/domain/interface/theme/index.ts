@@ -1,1 +1,1 @@
-export * from "./itheme.interface";
+export * from "./theme.interface";
