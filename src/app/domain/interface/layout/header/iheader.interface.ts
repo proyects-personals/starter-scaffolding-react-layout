@@ -1,4 +1,4 @@
-import type { UserModel } from "@domain";
+import type { UserModel } from "@/app/domain";
 import type React from "react";
 
 /**

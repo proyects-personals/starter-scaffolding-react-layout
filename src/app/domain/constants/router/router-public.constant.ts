@@ -1,13 +1,13 @@
-import { APP_ROUTES } from "./router.constant";
+import { APP_ROUTES } from "@/app/domain";
 
 /**
  * Lista de rutas públicas permitidas en la aplicación.
- * * @description
+ * @description
  * Define un array de strings que contiene los paths de las vistas que no requieren
  * autenticación previa.
- * * @type {string[]}
+ * @type {string[]}
  * @version 1.0.0
- * * @example
+ * @example
  * if (PUBLIC_ROUTES.includes(location.pathname)) {
  * // Permitir acceso sin token
  * }

@@ -2,17 +2,17 @@ import type { IParseValueUtil } from "./iparse-value.util";
 
 /**
  * Utilidad para el parseo seguro de tipos (Type-Safe Casting) de valores serializados.
- * * @description
+ * @description
  * Esta clase proporciona métodos para convertir strings (comúnmente de `localStorage` o Query Params)
  * a tipos primitivos (`string`, `number`, `boolean`) u objetos complejos mediante `JSON.parse`.
  * Implementa una lógica de validación estricta para evitar errores en tiempo de ejecución sin usar 'any'.
- * * @implements {IParseValueUtil}
+ * @implements {IParseValueUtil}
  * @version 1.0.0
  */
 export class ParseValueUtil implements IParseValueUtil {
   /**
    * Type Guard privado para validar si un valor desconocido coincide con el tipo de un objetivo.
-   * * @private
+   * @private
    * @template T
    * @param {unknown} value - El valor a evaluar.
    * @param {T} target - El valor de referencia para comparar el tipo.
@@ -24,11 +24,11 @@ export class ParseValueUtil implements IParseValueUtil {
 
   /**
    * Ejecuta la lógica de parseo basada en el tipo del valor `fallback`.
-   * * @template T
+   * @template T
    * @param {string | null} raw - El string a parsear.
    * @param {T} fallback - Valor por defecto y guía de tipo.
    * @returns {T} El resultado del parseo o el fallback en caso de error o nulidad.
-   * * @example
+   * @example
    * const util = new ParseValueUtil();
    * const count = util.parse("123", 0); // 123 (number)
    * const isActive = util.parse("true", false); // true (boolean)

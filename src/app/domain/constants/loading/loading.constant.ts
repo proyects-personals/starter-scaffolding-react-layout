@@ -1,14 +1,14 @@
 import { createContext } from "react";
 
-import type { ILoading } from "../../interface";
+import type { ILoading } from "@/app/domain";
 
 /**
  * Contexto de React para gestionar el estado de carga global de la aplicación.
- * * @description
+ * @description
  * Proporciona un mecanismo centralizado para controlar y acceder al estado de carga
  * * @type {React.Context<ILoading | null>}
  * @version 1.0.0
- * * @example
+ * @example
  * const loadingState = useContext(LoadingContext);
  * if (!loadingState) throw new Error("useLoading debe usarse dentro de LoadingProvider");
  */

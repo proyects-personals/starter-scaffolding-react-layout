@@ -1,4 +1,4 @@
-import type { IChildren } from "../ibase.interface";
+import type { IChildren } from "@/app/domain";
 
 /**
  * @interface IPageWrapper

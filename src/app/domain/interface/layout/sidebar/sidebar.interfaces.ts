@@ -1,4 +1,4 @@
-import type { RoleEnum } from "@domain";
+import type { RoleEnum } from "@/app/domain";
 import type React from "react";
 
 /**

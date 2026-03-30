@@ -3,7 +3,7 @@ import {
   VideoType,
   YoutubeEmbedParams,
   YoutubeEmbedURL,
-} from "../enums";
+} from "@/app/domain";
 
 /**
  * @description Class de utilidades para manejo de videos, especialmente YouTube.
