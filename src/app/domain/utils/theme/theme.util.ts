@@ -1,6 +1,5 @@
 import { THEME_STORAGE_KEY, ThemeEnum, type ThemeNameType } from "@/app/domain";
 import { darkTheme, lightTheme } from "@/assets";
-
 /**
  * Utilidad para la gestión y resolución del tema visual (Light/Dark).
  * @description
