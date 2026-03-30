@@ -1,15 +1,15 @@
 import { createContext } from "react";
 
-import type { IThemeContextValue } from "../../interface";
+import type { IThemeContextValue } from "@/app/domain";
 
 /**
  * Contexto de React para la gestión del tema visual (Light/Dark mode) de la aplicación.
- * * @description
+ * @description
  * Proporciona el estado actual del tema y las funciones para alternar entre diferentes
  * modos visuales.
- * * @type {React.Context<IThemeContextValue | null>}
+ * @type {React.Context<IThemeContextValue | null>}
  * @version 1.0.0
- * * @example
+ * @example
  * const theme = useContext(ThemeContext);
  * if (!theme) throw new Error("useTheme debe usarse dentro de ThemeProvider");
  */

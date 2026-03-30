@@ -1,7 +1,7 @@
 import { ParseValueUtil } from "./parse-value.util";
 import { SafeCallUtil } from "./safe-call.util";
 
-import type { IStorageResult } from "../interface";
+import type { IStorageResult } from "@/app/domain";
 
 /**
  * Utilidad avanzada para la gestión segura del almacenamiento local (`localStorage`).
@@ -81,5 +81,4 @@ export class StorageUtil extends ParseValueUtil {
   }
 }
 
-/** Instancia global de StorageUtil */
 export const storageUtil = new StorageUtil();

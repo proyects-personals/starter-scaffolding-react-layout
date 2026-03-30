@@ -1,4 +1,4 @@
-import type { RoleEnum } from "../../enums";
+import type { RoleEnum } from "@/app/domain";
 
 /**
  * @interface UserModel
