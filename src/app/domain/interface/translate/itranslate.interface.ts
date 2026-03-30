@@ -1,4 +1,4 @@
-import type { LanguageType } from "../../type";
+import type { LanguageType } from "@/app/domain";
 
 /**
  * @description Interfaz para el contexto de traducción.
